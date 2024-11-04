@@ -12,7 +12,7 @@ import (
 
 	"github.com/gocolly/colly/v2"
 	"github.com/gocolly/colly/v2/proxy"
-	"github.com/joho/godotenv" // Add this import
+	"github.com/joho/godotenv"
 )
 
 // Discord webhook configuration
@@ -115,7 +115,6 @@ func main() {
 		return
 	}
 
-	// Rest of the code remains the same...
 	// Read proxies from file
 	proxyURLs, err := readProxiesFromFile("proxies.txt")
 	if err != nil {
