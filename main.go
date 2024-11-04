@@ -99,9 +99,11 @@ func sendDiscordNotification(config Config, message string) error {
 
 func main() {
 	// Load .env file
-	if err := godotenv.Load(); err != nil {
-		fmt.Printf("Error loading .env file: %v\n", err)
-		return
+	if os.Getenv("ENV") != "production" {
+		if err := godotenv.Load(); err != nil {
+			fmt.Printf("Error loading .env file: %v\n", err)
+			return
+		}
 	}
 
 	// Discord configuration
