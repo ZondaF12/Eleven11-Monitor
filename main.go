@@ -182,7 +182,7 @@ func main() {
 	cacheBuster := time.Now()
 	url := fmt.Sprintf("https://www.eleven11prints.com/product-page/the-eleven-11-4-watch-ruck-case/?limit=%d", cacheBuster.Unix())
 
-	ticker := time.NewTicker(30 * time.Second)
+	ticker := time.NewTicker(time.Minute)
 	defer ticker.Stop()
 
 	// First check
